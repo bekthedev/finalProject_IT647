@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNHU-a-Palooza Details</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="SNHU-a-palooza Logo" />
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Event Details</h1>
+            <p>
+                The city of Woodstock, NY is preparing to start a new open concert series, SNHU-a-palooza.
+                The concerts will run on the first Friday of every month in a farmer’s field. Admission is free, but to protect the venue—and because past larger crowds damaged the farm—we’re capping attendance at 50,000 guests.
+                If you’d like to join us under the stars, please register in advance!
+            </p>
+            <div class="button-group">
+                <a href="register.html" class="button">Register Now</a>
+                <a href="index.html" class="button">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Calendar embed -->
+    <section class="calendar-widget">
+        <h2>Upcoming Concert Dates</h2>
+        <iframe
+                src="https://calendar.google.com/calendar/embed?src=e95397c1479cb053a039928dbaac36c12cd5bd52e5df1aebd55f148a28e27c6b%40group.calendar.google.com&ctz=America%2FChicago"
+                style="border:0;"
+                width="100%"
+                height="300"
+                frameborder="0"
+                scrolling="no">
+        </iframe>
+    </section>
+</main>
+
+
+<footer>
+    <p>&copy; 2025 SNHU-a-Palooza. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('nav-links').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

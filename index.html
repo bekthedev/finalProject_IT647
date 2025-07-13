@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNHU-a-palooza</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="SNHU-a-palooza Logo" />
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>SNHU-a-palooza</h1>
+            <p>
+                 An open concert series held on the first Friday of every month in the heart of Woodstock, NY.
+                Enjoy live music from local and national artists — completely free!
+            </p>
+            <div class="button-group">
+                <a href="details.html" class="button">More Info</a>
+                <a href="register.html" class="button">Register Now</a>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 SNHU-a-Palooza. All rights reserved.</p>
+</footer>
+<script>
+    function toggleMenu() {
+        document.getElementById('nav-links').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

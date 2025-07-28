@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Confirmation</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="SNHU-a-palooza logo" />
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="details.html">Details</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Registration Confirmation</h1>
+  <p id="errorMsg" class="error"></p>
+  <p><strong>Confirmation Number:</strong> <span id="confNum">Loading...</span></p>
+  <p><strong>Name:</strong> <span id="name">Loading...</span></p>
+  <p><strong>Email:</strong> <span id="email">Loading...</span></p>
+  <p><strong>Phone:</strong> <span id="phone">Loading...</span></p>
+  <button onclick="window.print()" class="print-button">Print Confirmation</button>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 SNHU-a-palooza. All rights reserved.</p>
+</footer>
+
+<script src="js/confirmation.js"></script>
+</body>
+</html>

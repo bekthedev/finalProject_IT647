@@ -15,36 +15,30 @@ To maintain this attendance cap, a digital registration system was created, allo
 The website includes the following five public pages:
 
 ### 1. **Homepage (`index.html`)**
-
 * Overview of the SNHU-a-palooza event
 * Navigation menu linking to all other pages
 * Clean, responsive layout with emphasis on accessibility and visual appeal
 
 ### 2. **Details Page (`details.html`)**
-
 * Expanded information about the concert series
 * Multimedia inclusion (image/audio)
 * Embedded third-party calendar widget showing all concert dates
 * Clickable calendar links to corresponding event details
 
 ### 3. **Registration Page (`register.html`)**
-
 * Form that collects:
-
-    * Full name
-    * Email (validated)
-    * Phone number (validated)
-    * Selected event date
+  * Full name
+  * Email (validated)
+  * Phone number (validated)
+  * Selected event date
 * Responsive form inputs styled for desktop and mobile screens
 * Input validation using client-side scripting
 
 ### 4. **Confirmation Page (`confirmation.html`)**
-
 * Displays user information and a **unique control number**
 * Message confirming successful registration
 
 ### 5. **Print View Page (`print.html`)**
-
 * Optimized print version of the confirmation page
 * Clean formatting for physical check-in at event entry
 
@@ -68,26 +62,47 @@ This project demonstrates mastery of the following course outcomes:
 * **CSS3** with media queries for mobile and web styling
 * **JavaScript** for form validation and interactivity
 * **Third-Party Tools**:
-
-    * Google Calendar or similar widget for displaying events
-    * Unique ID generation for confirmation codes
-
----
-
-## 🔧 Developer Notes
-
-* All pages include consistent navigation and footer placement.
-* Code follows clean conventions with descriptive class/ID names and inline comments where appropriate.
-* Styling and layout decisions were made with UX and accessibility in mind.
-* The calendar and multimedia features are fully functional and enhance user engagement.
+  * Google Calendar or similar widget for displaying events
+  * Unique ID generation for confirmation codes
 
 ---
 
-## 📝 Future Improvements (Optional Enhancements)
+## 🗄️ Database Setup (MySQL)
 
-* Add backend support to store registrations in a database
-* Include QR codes on confirmation printouts for faster check-in
-* Implement user login for returning registrants
+The registration system uses a MySQL database to store user information securely and reliably.
+
+### Database: `finalProjectIT647`
+
+You can initialize the database by running the `data.sql` script included in the project.
+
+#### ⚙️ Steps:
+
+1. Ensure MySQL is installed and running locally.
+2. Open your terminal and run the following command:
+   ```bash
+   mysql -u root -p < sql/data.sql
+   ```
+3. This will:
+  - Create the database `finalProjectIT647`
+  - Create the table `finalProjectIT647Table`
+  - Insert sample registration records
+
+#### Table Structure:
+
+| Field               | Type         | Null | Key    | Default | Extra          |
+|--------------------|--------------|------|--------|---------|----------------|
+| RowNum             | INT          | NO   | PRI    | NULL    | AUTO_INCREMENT |
+| confirmationNumber | VARCHAR(255) | YES  | UNIQUE | `""`    |                |
+| Name               | VARCHAR(100) | NO   |        | NULL    |                |
+| Email              | VARCHAR(100) | NO   |        | NULL    |                |
+| Phone              | VARCHAR(20)  | NO   |        | NULL    |                |
+
+You can inspect the table using:
+
+```sql
+USE finalProjectIT647;
+SELECT * FROM finalProjectIT647Table;
+```
 
 ---
 
@@ -101,11 +116,10 @@ This project demonstrates mastery of the following course outcomes:
 * `/css/style.css`
 * `/images/` (logo, multimedia, etc.)
 * `/js/validation.js` *(if applicable)*
+* `sql/data.sql` *(for database setup)*
 
 ---
 
 ## 🔐 License
 
 This project is academic and educational in nature. Use of materials beyond this context requires instructor permission.
-
-

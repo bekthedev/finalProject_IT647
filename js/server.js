@@ -29,8 +29,8 @@ app.use(express.json());
 app.post('/regForm', (req, res) => {
     const { name, email, phone, confirmationNumber } = req.body;
 
-    const query = `
-        INSERT INTO finalProjectIT647Table (confirmationNumber, Name, Email, Phone)
+    const query = ` 
+    INSERT INTO finalProjectIT647Table (confirmationNumber, Name, Email, Phone)
         VALUES (?, ?, ?, ?)
     `;
 
